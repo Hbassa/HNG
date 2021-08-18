@@ -7,6 +7,8 @@ name = "pypi"
 django = "*"
 django-environ = "*"
 django-heroku = "*"
+django-crispy-forms = "*"
+whitenoise = "*"
 
 [dev-packages]
 
