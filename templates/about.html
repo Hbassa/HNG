@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for bio in object_list %}
+    <div class="card mb-3" style="max-width: 100%; ">
+        <div class="row g-0">  
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">{{ bio.name }}</h2>
+              <h4 class="card-text">{{ bio.stack }}</h6>
+              <p class="card-text">Beginner backend dev, passionate about building web applications 
+                  and interested in machine learning.</p>
+              
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="card-text text-muted">{{ bio.email}}</p>
+            <p class="card-text text-muted">{{ bio.city}}</p>
+            <a class="nav-link" href="http://www.github.com/hbassa">{{ bio.github}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
+        <div class="card-header"><h2>SKILLS</h2></div>
+        {% for x in skills %}
+        <div class="card-body">
+            <h6 class="card-title">{{ x.name }}</h6>
+            <p class="card-text">{{ x.level }}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+    {% endfor %}
+
+{% endblock %}
