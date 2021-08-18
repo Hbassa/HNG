@@ -9,6 +9,7 @@ django-environ = "*"
 django-heroku = "*"
 django-crispy-forms = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
